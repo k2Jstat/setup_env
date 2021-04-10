@@ -1,3 +1,3 @@
-docker build -t ub1804_jupyter:latest ./
+docker build -t jupyter_ubuntu1804:latest ./
 
-docker run -v cd:/work -it --name ub1804_jupyter -p 9999:9999 quick_conda
+docker run -v cd:/work -it --name work_analytics -p 8864:8864 jupyter_ubuntu1804
