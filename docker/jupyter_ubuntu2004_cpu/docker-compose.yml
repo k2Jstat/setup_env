@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+    jupyter_cpu:
+        image: jupyter_ubuntu20.04:cpu
+        build:
+            context: .
+            dockerfile: Dockerfile
+        #volumes: 
+        #    - ${PWD}:/work
+        ports:
+            - 9999:9999
+            - 8786:8786
+            - 6006:6006 
+        command: "jupyter lab --port 9999 --ip=0.0.0.0 --allow-root --LabApp.token=''"
+        container_name: bun_cpu
+        restart: always
