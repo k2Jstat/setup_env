@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+    bunseki:
+        image: bunseki_cpu:latest
+        build:
+            context: .
+            dockerfile: Dockerfile
+        #volumes: 
+        #    - ${PWD}:/work
+        ports:
+            - 8181:8181
+            - 8786:8786
+            - 6006:6006 
+        command: "jupyter lab --port 8181 --ip=0.0.0.0 --allow-root --LabApp.token=''"
+        container_name: bun_cpu
+        restart: always
