@@ -26,6 +26,8 @@ RUN pip install dash
 RUN pip install pytorch-tabnet
 #RUN pip install causalml
 RUN pip install yolov5
+RUn pip install msoffcrypto-tool
+
 
 RUN git clone https://github.com/DeNA/HandyRL.git
 RUN cd HandyRL
