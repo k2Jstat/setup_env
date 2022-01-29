@@ -2,12 +2,12 @@ version: "3"
 
 services:
     bunseki:
-        image: bunseki_cpu:latest
+        image: kaggle_cpu:v01
         build:
             context: .
-            dockerfile: Dockerfile
-        #volumes: 
-        #    - ${PWD}:/work
+            dockerfile: kaggle.dockerfile
+#        volumes: 
+#            - ${PWD}:/work
         ports:
             - 8181:8181
             - 8786:8786
